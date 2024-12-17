@@ -2,7 +2,7 @@
   "name": "my-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://apr-ryu.github.io",
+  "homepage": "https://apr-ryu.github.io/e-commerce/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
