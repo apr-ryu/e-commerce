@@ -12,6 +12,7 @@ import { Products } from "@/app/statics/constants/interfaces";
 import { useCartContext } from "@/app/statics/constants/cartContext";
 
 export default function ProductDetailPage() {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   const [productDetail, setProductDetail] = useState<Products | null>(null);
@@ -96,7 +97,7 @@ export default function ProductDetailPage() {
             {productDetail.img.map((src, index) => (
               <div className="img-wrapper" key={index}>
                 <Image
-                  src={src}
+                  src={`${baseUrl}${src}`}
                   alt={`${index}`}
                   quality={100}
                   fill={true}

@@ -10,6 +10,7 @@ import { useCartContext } from "@/app/statics/constants/cartContext";
 
 export default function CartPage() {
   const { state, dispatch } = useCartContext();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   return (
     <div id="cart">
@@ -21,7 +22,7 @@ export default function CartPage() {
               <div className="item-wrapper" key={index}>
                 <div className="img-wrapper">
                   <Image
-                    src={cartItem.thumbnail}
+                    src={`${baseUrl}${cartItem.thumbnail}`}
                     alt={`p0`}
                     quality={100}
                     fill={true}

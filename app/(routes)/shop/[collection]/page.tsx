@@ -19,16 +19,7 @@ export default async function ShopPage() {
   const response = await getProducts();
   return (
     <div id="shop">
-      <CollectionWrapper response={response}>
-        {/* <SectionWithCards
-        classname="product"
-        title="ALL PRODUCTS"
-        subtitle="SHOP"
-        cardList={response}
-        grid={4}
-      /> */}
-        {/* <Servercomp /> */}
-      </CollectionWrapper>
+      <CollectionWrapper response={response} />
     </div>
   );
 }

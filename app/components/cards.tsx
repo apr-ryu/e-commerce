@@ -28,6 +28,7 @@ export default function Cards({
   grid,
   maxDisplay,
 }: MyProps) {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const router = useRouter();
   return (
     <div className="card-wrapper">
@@ -41,7 +42,7 @@ export default function Cards({
                 }}
               >
                 <Image
-                  src={item.img[0]}
+                  src={`${baseUrl}${item.img[0]}`}
                   alt={item.title}
                   quality={100}
                   fill={true}
